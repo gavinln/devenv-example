@@ -27,9 +27,9 @@ env-up:
 env-rm:
 	poetry env remove $$(poetry env info -e)
 
-.PHONY: run-imgapp
-run-imgapp: env-up  ## run Flask application
-	poetry run python $@.py
+.PHONY: imgapp
+imgapp: env-up  ## run Flask application
+	poetry run python -c "from $@ import main; main()"
 
 .PHONY: clean
 clean: env-rm  ## remove temporary files
