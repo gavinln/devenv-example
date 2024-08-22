@@ -14,6 +14,10 @@ help:  ## help for this Makefile
 tmux:  ## run tmux
 	tmuxp load .tmuxp.yaml
 
+.PHONY: devenv-pre-commit
+devenv-pre-commit:  ## run pre-commit
+	devenv test
+
 .PHONY: fix
 fix:  ## run isort and ruff on python code
 	ruff check --fix imgapp
