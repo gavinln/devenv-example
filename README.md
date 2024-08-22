@@ -62,4 +62,4 @@ devenv test
 
 [Reproducible Python environments][1000] with Poetry and Poetry2nix
 
-https://www.tweag.io/blog/2020-08-12-poetry2nix/
+[1000]: https://www.tweag.io/blog/2020-08-12-poetry2nix/
