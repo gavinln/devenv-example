@@ -13,7 +13,7 @@ environment built using [Nix][110]. Nix is a purely functional package manager.
 - devenv init - initializes setup
 - devenv test - builds your developer environment
 - devenv shell - activates your developer environment
-- devenv search <NAME> - searches packages
+- devenv search NAME - searches packages
 - devenv update - updates & pins inputs from devenv.yaml into devenv.lock
 - devenv gc - deletes unused environments to save disk space
 - devenv up - starts processes
@@ -26,37 +26,37 @@ imgapp is a [Flask][200] application
 
 1. Test pre-commit hooks
 
-```
-pre-commit run
-```
+    ```sh
+    pre-commit run
+    ```
 
 2. Setup pre-commit hooks
 
-```
-pre-commit install
-```
+    ```sh
+    pre-commit install
+    ```
 
 3. Run imgapp
 
-```
-python -c "import imgapp; imgapp.main()"
-```
+    ```sh
+    python -c "import imgapp; imgapp.main()"
+    ```
 
-3. Open a web browser at http://127.0.0.1:5000/
+4. Open a web browser at `http://127.0.0.1:5000/`
 
-4. View an image at http://127.0.0.1:5000/image
+5. View an image at `http://127.0.0.1:5000/image`
 
-5. Build the app
+6. Build the app
 
-```
-poetry build
-```
+    ```sh
+    poetry build
+    ```
 
-6. Run app checks
+7. Run app checks
 
-```
-devenv test
-```
+    ```sh
+    devenv test
+    ```
 
 ## Links
 
