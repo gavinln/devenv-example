@@ -63,7 +63,7 @@
 
   languages.python.enable = true;
   languages.python.version = "3.12.4";
-  languages.python.poetry.enable = true;
+  languages.python.poetry.enable = false;
 
   # https://devenv.sh/pre-commit-hooks/
   # pre-commit.hooks.shellcheck.enable = true;
