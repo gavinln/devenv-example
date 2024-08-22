@@ -87,9 +87,7 @@
     black.enable = true;
     black.settings.flags = "-l 79";
 
-    # requires an old version of Python 3.11
-    # isort.enable = true;
+    isort.enable = true;
+    isort.settings.flags = "--float-to-top";
   };
-
-  # See full reference at https://devenv.sh/reference/options/
 }
