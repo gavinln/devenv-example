@@ -5,12 +5,7 @@
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = [
-    pkgs.git
-    pkgs.curl
-    pkgs.jq
-    pkgs.nushell
-  ];
+  packages = [ pkgs.git pkgs.curl pkgs.jq pkgs.nushell ];
 
   # https://devenv.sh/languages/
   # languages.rust.enable = true;
@@ -89,5 +84,9 @@
 
     isort.enable = true;
     isort.settings.flags = "--float-to-top";
+
+    nixfmt.enable = true;
+
+    markdownlint.enable = true;
   };
 }
