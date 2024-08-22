@@ -16,7 +16,6 @@ tmux:  ## run tmux
 
 .PHONY: fix
 fix:  ## run isort and ruff on python code
-	isort --float-to-top imgapp
 	ruff check --fix imgapp
 
 .PHONY: env-up
