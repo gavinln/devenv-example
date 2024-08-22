@@ -63,3 +63,9 @@ imgapp is a [Flask][200] application
 [Reproducible Python environments][1000] with Poetry and Poetry2nix
 
 [1000]: https://www.tweag.io/blog/2020-08-12-poetry2nix/
+
+### Learning nix
+
+[Nix language basics](https://nix.dev/tutorials/nix-language)
+
+[Nix flakes](https://nixos.wiki/wiki/Flakes)
