@@ -69,11 +69,13 @@
   # pre-commit.hooks.shellcheck.enable = true;
 
   pre-commit.hooks = {
-    trim-trailing-whitespace.enable = true;
-    end-of-file-fixer.enable = true;
-    check-yaml.enable = true;
+
     check-added-large-files.enable = true;
+    check-toml.enable = true;
+    check-yaml.enable = true;
+    end-of-file-fixer.enable = true;
     mixed-line-endings.enable = true;
+    trim-trailing-whitespace.enable = true;
 
     # lint shell scripts
     shellcheck.enable = true;
