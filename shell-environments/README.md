@@ -24,8 +24,9 @@ List current channel
 nixpkgs https://nixos.org/channels/nixpkgs-unstable
 ```
 
-Open your web brower to https://channels.nixos.org/ to list all available
-channels.
+Open your web brower to [nix-channels][110] to list all available channels.
+
+[110]: https://channels.nixos.org/
 
 ## Reproducible interpreted scripts
 
