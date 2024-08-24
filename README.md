@@ -19,7 +19,7 @@ This project demonstrates two ways to manage a development environment.
 
 1. Use devenv with the imgapp Flask app
 
-2. Use Nix flakes with the hello-world Flask app
+2. Use Nix flakes with the hello Flask app
 
 ## Common commands for devenv
 
@@ -84,7 +84,22 @@ imgapp is a [Flask][200] application
     devenv test
     ```
 
-## Run the hello-world Flask app with Nix flakes
+## Run the hello Flask app with Nix flakes
+
+1. Change to the root directory
+cd python-flake
+
+2. Create the lock file
+nix flake lock
+
+3. Start a shell with the environment
+nix develop
+
+4. Install the poetry dependencies
+poetry install
+
+5. Run the Flask app
+poetry run flask --app hello run
 
 ## Links
 
