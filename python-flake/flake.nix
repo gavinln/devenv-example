@@ -14,7 +14,12 @@
             (ps: with ps; [ pip isort black vulture ]);
         in {
           default = pkgs.${system}.mkShellNoCC {
-            packages = with pkgs.${system}; [ ruff poetry pythonEnv ];
+            packages = with pkgs.${system}; [
+              nixfmt-rfc-style
+              poetry
+              pythonEnv
+              ruff
+            ];
           };
         });
       # not supported

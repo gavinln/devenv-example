@@ -17,6 +17,7 @@ tmux:  ## run tmux
 .PHONY: fix
 fix:  ## run isort and ruff on python code
 	ruff check --fix
+	nixfmt flake.nix
 
 .PHONY: env-up
 env-up:
