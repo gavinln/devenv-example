@@ -7,7 +7,21 @@ environment built using [Nix][110]. Nix is a purely functional package manager.
 
 [110]: https://github.com/NixOS/nix
 
-## Setup a new project
+A [Nix Flake][120] is a feature in the Nix package manager that provides a
+standardized, reproducible way to define, distribute, and use software packages
+and configurations. It includes a `flake.nix` file specifying dependencies
+(inputs) and outputs, ensuring consistency and facilitating easy sharing and
+composability of Nix expressions.
+
+[120]: https://nixos.wiki/wiki/Flakes
+
+This project demonstrates two ways to manage a development environment.
+
+1. Use devenv with the imgapp Flask app
+
+2. Use Nix flakes with the hello-world Flask app
+
+## Common commands for devenv
 
 - devenv info - summary of the current environment
 - devenv init - initializes setup
@@ -18,45 +32,59 @@ environment built using [Nix][110]. Nix is a purely functional package manager.
 - devenv gc - deletes unused environments to save disk space
 - devenv up - starts processes
 
-## Run a Flask application
+## Run the imgapp Flask application with devenv
 
 imgapp is a [Flask][200] application
 
 [200]: https://github.com/pallets/flask
 
-1. Test pre-commit hooks
+1. Start the devenv environment
+
+    ```sh
+    devenv shell
+    ```
+
+2. Test pre-commit hooks
 
     ```sh
     pre-commit run
     ```
 
-2. Setup pre-commit hooks
+3. Setup pre-commit hooks
 
     ```sh
     pre-commit install
     ```
 
-3. Run imgapp
+4. Run imgapp
 
     ```sh
-    python -c "import imgapp; imgapp.main()"
+    make imgapp
     ```
 
-4. Open a web browser at `http://127.0.0.1:5000/`
+5. Open a web browser at `http://127.0.0.1:5000/`
 
-5. View an image at `http://127.0.0.1:5000/image`
+6. View an image at `http://127.0.0.1:5000/image`
 
-6. Build the app
+7. Build the app
 
     ```sh
     poetry build
     ```
 
-7. Run app checks
+8. View the build files
+
+    ```sh
+    ls dist/
+    ```
+
+9. Run app checks
 
     ```sh
     devenv test
     ```
+
+## Run the hello-world Flask app with Nix flakes
 
 ## Links
 

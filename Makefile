@@ -32,11 +32,13 @@ env-rm:
 
 .PHONY: imgapp
 imgapp: env-up  ## run Flask application
+	echo open localhost:5000 and localhost:5000/image
 	poetry run python -c "from $@ import main; main()"
 
 .PHONY: clean
 clean: env-rm  ## remove temporary files
 	rm -f poetry.lock
+	rm -rf dist/
 	find . -name '.pytest_cache' -type d -exec rm -rf '{}' +
 	find . -name '__pycache__' -type d -exec rm -rf '{}' +
 	find . -name '.ruff_cache' -type d -exec rm -rf '{}' +
