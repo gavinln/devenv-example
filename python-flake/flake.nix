@@ -1,3 +1,4 @@
+# vim: sw=2 ts=2 sts=2 et
 {
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
@@ -15,11 +16,16 @@
         in {
           default = pkgs.${system}.mkShellNoCC {
             packages = with pkgs.${system}; [
+              bashInteractive # for nested interactive shells: poetry shell
               nixfmt-rfc-style
               poetry
               pythonEnv
               ruff
             ];
+            shellHook = ''
+              # set SHELL to interactive bash
+              export SHELL=`which bash`
+            '';
           };
         });
       # not supported
