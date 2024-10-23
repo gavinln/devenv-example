@@ -87,19 +87,34 @@ imgapp is a [Flask][200] application
 ## Run the hello Flask app with Nix flakes
 
 1. Change to the root directory
+
+```
 cd python-flake
+```
 
 2. Create the lock file
+
+```
 nix flake lock
+```
 
 3. Start a shell with the environment
+
+```
 nix develop
+```
 
 4. Install the poetry dependencies
+
+```
 poetry install
+```
 
 5. Run the Flask app
+
+```
 poetry run flask --app hello run
+```
 
 ## Links
 
