@@ -88,31 +88,31 @@ imgapp is a [Flask][200] application
 
 1. Change to the root directory
 
-```
+```sh
 cd python-flake
 ```
 
 2. Create the lock file
 
-```
+```sh
 nix flake lock
 ```
 
 3. Start a shell with the environment
 
-```
+```sh
 nix develop
 ```
 
 4. Install the poetry dependencies
 
-```
+```sh
 poetry install
 ```
 
 5. Run the Flask app
 
-```
+```sh
 poetry run flask --app hello run
 ```
 
