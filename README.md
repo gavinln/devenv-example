@@ -15,6 +15,8 @@ composability of Nix expressions.
 
 [120]: https://nixos.wiki/wiki/Flakes
 
+For nix examples look at `gavinln/nix-example` repository.
+
 This project demonstrates two ways to manage a development environment.
 
 1. Use devenv with the imgapp Flask app
