@@ -148,6 +148,10 @@ poetry run flask --app hello run
 
 [1040]: https://nixos-and-flakes.thiscute.world/
 
+[Practical Nix Flakes][1050]
+
+[1040]: https://serokell.io/blog/practical-nix-flakes
+
 ### nix with AI agents
 
 [LLM Agents in a Nix Sandbox][1100]
