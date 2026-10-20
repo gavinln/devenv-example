@@ -124,6 +124,28 @@ poetry run flask --app hello run
 
 ### Learning nix
 
-[Nix language basics](https://nix.dev/tutorials/nix-language)
+[Nix language basics][1010]
 
-[Nix flakes](https://nixos.wiki/wiki/Flakes)
+[1010]: https://nix.dev/tutorials/nix-language
+
+[Nix flakes][1020]
+
+[1020]: https://nixos.wiki/wiki/Flakes
+
+[Nix series][1030]
+
+[1030]: https://dev.to/arnu515/my-new-nix-series-2cc3
+
+[Nix Flakes Book][1040]
+
+[1040]: https://nixos-and-flakes.thiscute.world/
+
+### nix with AI agents
+
+[LLM Agents in a Nix Sandbox][1100]
+
+[1100]: https://dev.to/andersonjoseph/how-i-run-llm-agents-in-a-secure-nix-sandbox-1899
+
+[Secure AI Agent Setup][1110]
+
+[1110]: https://ranti.dev/blog/securing-ai-agents-with-nix-and-bubblewrap
