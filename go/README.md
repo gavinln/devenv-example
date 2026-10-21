@@ -29,37 +29,31 @@ cd hello
 go mod init example/hello
 ```
 
-4. Format the code
+4. List code that needs formatting
+
+```
+gofmt -l .
+```
+
+5. Format the code by updating files
 
 ```
 gofmt -w .
 ```
 
-5. Check for static issues
-
-```
-go vet
-```
-
-6. Build the code
-
-```
-go build
-```
-
-7. Run the code
+6. Run the code
 
 ```
 go run .
 ```
 
-8. Test the code
+7. Test the code
 
 ```
 go test
 ```
 
-9. Run pre-commit checks
+8. Run pre-commit checks
 
 ```
 pre-commit run --all-files
