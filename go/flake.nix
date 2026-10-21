@@ -10,7 +10,7 @@
   description = "Go development with pre-commit, lint, tests";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nl beixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
   outputs =
@@ -36,6 +36,8 @@
             buildInputs = with pkgs; [
               go
               pre-commit
+              yamlfmt
+              nixfmt
             ];
           };
         }
