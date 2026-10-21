@@ -150,7 +150,7 @@ poetry run flask --app hello run
 
 [Practical Nix Flakes][1050]
 
-[1040]: https://serokell.io/blog/practical-nix-flakes
+[1050]: https://serokell.io/blog/practical-nix-flakes
 
 ### nix with AI agents
 
