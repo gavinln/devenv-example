@@ -7,18 +7,28 @@
 {
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self, nixpkgs }:
     let
       supportedSystems = [ "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
       pkgs = forAllSystems (system: nixpkgs.legacyPackages.${system});
-    in {
+    in
+    {
       # used by: nix develop
-      devShells = forAllSystems (system:
+      devShells = forAllSystems (
+        system:
         let
-          pythonEnv = pkgs.${system}.python312.withPackages
-            (ps: with ps; [ pip isort black vulture ]);
-        in {
+          pythonEnv = pkgs.${system}.python312.withPackages (
+            ps: with ps; [
+              pip
+              isort
+              black
+              vulture
+            ]
+          );
+        in
+        {
           default = pkgs.${system}.mkShellNoCC {
             packages = with pkgs.${system}; [
               bashInteractive # for nested interactive shells: poetry shell
@@ -32,7 +42,8 @@
               export SHELL=`which bash`
             '';
           };
-        });
+        }
+      );
       # not supported
       # nix build
       # nix run
