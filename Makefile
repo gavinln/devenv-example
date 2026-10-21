@@ -34,6 +34,10 @@ env-rm:
 markdownlint:  ## run markdown file lint
 	markdownlint --disable MD029 MD040 -- '**/*.md'
 
+.PHONY: nixfmt
+nixfmt:  ## format nix files
+	nixfmt $$(find . -name '*.nix')
+
 .PHONY: imgapp
 imgapp: env-up  ## run Flask application
 	echo open localhost:5000 and localhost:5000/image
