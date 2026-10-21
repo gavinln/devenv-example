@@ -118,12 +118,6 @@ poetry install
 poetry run flask --app hello run
 ```
 
-## Flox
-
-[Flox][300] is a language-agnostic package and environment manager.
-
-[300]: https://flox.dev/docs
-
 ## Links
 
 [Reproducible Python environments][1000] with Poetry and Poetry2nix
