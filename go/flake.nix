@@ -32,8 +32,9 @@
           pkgs = nixpkgs.legacyPackages.${system};
         in
         {
-          default = pkgs.mkShell {
+          default = pkgs.mkShellNoCC {
             buildInputs = with pkgs; [
+              # bashInteractive # for nested interactive shells
               go
               pre-commit
               yamlfmt
