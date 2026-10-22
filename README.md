@@ -42,27 +42,27 @@ imgapp is a [Flask][200] application
 
 1. Start the devenv environment
 
-    ```sh
-    devenv shell
-    ```
+```sh
+devenv shell
+```
 
 2. Test pre-commit hooks
 
-    ```sh
-    pre-commit run
-    ```
+```sh
+pre-commit run
+```
 
 3. Setup pre-commit hooks
 
-    ```sh
-    pre-commit install
-    ```
+```sh
+pre-commit install
+```
 
 4. Run imgapp
 
-    ```sh
-    make imgapp
-    ```
+```sh
+make imgapp
+```
 
 5. Open a web browser at `http://127.0.0.1:5000/`
 
@@ -70,21 +70,21 @@ imgapp is a [Flask][200] application
 
 7. Build the app
 
-    ```sh
-    poetry build
-    ```
+```sh
+poetry build
+```
 
 8. View the build files
 
-    ```sh
-    ls dist/
-    ```
+```sh
+ls dist/
+```
 
 9. Run app checks
 
-    ```sh
-    devenv test
-    ```
+```sh
+devenv test
+```
 
 ## Run the hello Flask app with Nix flakes
 
