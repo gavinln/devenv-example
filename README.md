@@ -23,6 +23,59 @@ This project demonstrates two ways to manage a development environment.
 
 2. Use Nix flakes with the hello Flask app
 
+## Install devenv
+
+Install devenv using nix
+
+```
+
+nix-env --install --attr devenv -f https://github.com/NixOS/nixpkgs/tarball/nixpkgs-unstable
+```
+
+### Basics
+
+1. Change to the basic example directory
+
+```
+cd devenv-basics
+```
+
+2. Start the shell
+
+```
+devenv shell
+```
+
+3. Show the location of the devenv version of `jq`
+
+```
+which jq
+```
+
+4. Show environment variables setup by devenv
+
+```
+printenv | grep DEV
+```
+
+5. Exit the shell
+
+```
+exit
+```
+
+6. Show the global version of `jq` if it exists
+
+```
+which jq
+```
+
+7. Run the command from outside the devenv shell
+
+```
+devenv shell -- which jq
+```
+
 ## Common commands for devenv
 
 - devenv info - summary of the current environment
