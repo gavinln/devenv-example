@@ -37,8 +37,8 @@
 
               # JavaScript, TypeScript, CSS, HTML, JSON
               # Markdown, YAML, and GraphQL
-              oxlint  # code linter
-              biome  # code formatter and linter
+              oxlint # code linter
+              biome # code formatter and linter
 
               pre-commit
             ];
