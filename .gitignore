@@ -15,3 +15,7 @@ __pycache__/
 /devenv-files-tasks/config.toml
 /devenv-files-tasks/docker-compose.yml
 /devenv-files-tasks/settings.ini 
+/devenv-files-tasks/README-test.txt
+/devenv-files-tasks/setup-test.sh
+/devenv-files-tasks/.env-test.local
+/devenv-files-tasks/config/generated.toml
