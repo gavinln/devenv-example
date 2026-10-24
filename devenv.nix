@@ -1,3 +1,4 @@
+# vim: tabstop=2 shiftwidth=2 softtabstop=2 expandtab:
 {
   pkgs,
   lib,
@@ -12,6 +13,7 @@
 
   # https://devenv.sh/packages/
   packages = [
+    pkgs.bashInteractive
     pkgs.git
     pkgs.curl
     pkgs.jq
@@ -61,6 +63,7 @@
   };
 
   enterShell = ''
+    bash --version
     hello
     git --version
     silly-example foo=1
@@ -76,31 +79,4 @@
   languages.python.version = "3.12.4";
   languages.python.poetry.enable = true;
   languages.python.poetry.install.enable = false;
-
-  # https://devenv.sh/pre-commit-hooks/
-  # pre-commit.hooks.shellcheck.enable = true;
-
-  pre-commit.hooks = {
-
-    check-added-large-files.enable = true;
-    check-toml.enable = true;
-    check-yaml.enable = true;
-    end-of-file-fixer.enable = true;
-    mixed-line-endings.enable = true;
-    trim-trailing-whitespace.enable = true;
-
-    # lint shell scripts
-    shellcheck.enable = true;
-
-    # format Python code
-    black.enable = true;
-    black.settings.flags = "-l 79";
-
-    isort.enable = true;
-    isort.settings.flags = "--float-to-top";
-
-    nixfmt.enable = true;
-
-    markdownlint.enable = true;
-  };
 }

@@ -127,11 +127,22 @@
     "watch:run-if-modified" = {
       exec = "echo run task if json files are modified";
       execIfModified = [
-        "*.json"       # All JSON files in the current directory
+        "*.json" # All JSON files in the current directory
       ];
       # only run in a specific directory
       # cwd = "./devenv-files-tasks";
     };
+  };
+
+  # task with 2 inputs: name and value
+  tasks."example:task-with-input" = {
+    input = {
+      name = "John";
+      value = 1;
+    };
+    exec = ''
+      echo "task-with-input $DEVENV_TASK_INPUT"
+    '';
   };
 
   enterShell = ''
