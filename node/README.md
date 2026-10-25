@@ -25,4 +25,3 @@ biome format --write hello.js
 ```
 biome check hello.js
 ```
-
