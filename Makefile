@@ -18,18 +18,6 @@ tmux:  ## run tmux
 devenv-pre-commit:  ## run pre-commit
 	devenv test
 
-.PHONY: fix
-fix:  ## run isort and ruff on python code
-	ruff check --fix imgapp
-
-.PHONY: env-up
-env-up:
-	poetry install
-
-.PHONY: env-rm
-env-rm:
-	poetry env remove $$(poetry env info -e)
-
 .PHONY: markdownlint
 markdownlint:  ## run markdown file lint
 	markdownlint --disable MD029 MD040 -- '**/*.md'
@@ -37,11 +25,6 @@ markdownlint:  ## run markdown file lint
 .PHONY: nixfmt
 nixfmt:  ## format nix files
 	nixfmt $$(find . -name '*.nix')
-
-.PHONY: imgapp
-imgapp: env-up  ## run Flask application
-	echo open localhost:5000 and localhost:5000/image
-	poetry run python -c "from $@ import main; main()"
 
 .PHONY: clean
 clean: env-rm  ## remove temporary files
