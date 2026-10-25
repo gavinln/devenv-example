@@ -1,4 +1,4 @@
-session_name: llm-lib
+session_name: devenv-example
 start_directory: "."
 windows:
 - window_name: edit-run
@@ -7,9 +7,9 @@ windows:
   shell_command_before:
     - echo initial command
   panes:
-    - shell_command: poetry shell
+    - shell_command: bash
       focus: true
-    - shell_command: poetry shell
-- window_name: git
+    - shell_command: eza -s modified -l --time-style relative
+- window_name: jj
   panes:
-    - shell_command: poetry run lazygit
+    - shell_command: jj st
