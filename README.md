@@ -28,7 +28,6 @@ This project demonstrates two ways to manage a development environment.
 Install devenv using nix
 
 ```
-
 nix-env --install --attr devenv -f https://github.com/NixOS/nixpkgs/tarball/nixpkgs-unstable
 ```
 
@@ -86,58 +85,6 @@ devenv shell -- which jq
 - devenv update - updates & pins inputs from devenv.yaml into devenv.lock
 - devenv gc - deletes unused environments to save disk space
 - devenv up - starts processes
-
-## Run the imgapp Flask application with devenv
-
-imgapp is a [Flask][200] application
-
-[200]: https://github.com/pallets/flask
-
-1. Start the devenv environment
-
-```sh
-devenv shell
-```
-
-2. Test pre-commit hooks
-
-```sh
-pre-commit run
-```
-
-3. Setup pre-commit hooks
-
-```sh
-pre-commit install
-```
-
-4. Run imgapp
-
-```sh
-make imgapp
-```
-
-5. Open a web browser at `http://127.0.0.1:5000/`
-
-6. View an image at `http://127.0.0.1:5000/image`
-
-7. Build the app
-
-```sh
-poetry build
-```
-
-8. View the build files
-
-```sh
-ls dist/
-```
-
-9. Run app checks
-
-```sh
-devenv test
-```
 
 ## Run the hello Flask app with Nix flakes
 
