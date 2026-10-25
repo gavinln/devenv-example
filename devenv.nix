@@ -13,7 +13,6 @@
 
   # https://devenv.sh/packages/
   packages = [
-    pkgs.bashInteractive
     pkgs.git
     pkgs.curl
     pkgs.jq
@@ -74,9 +73,4 @@
     echo "Running tests"
     git --version | grep --color=auto "${pkgs.git.version}"
   '';
-
-  languages.python.enable = true;
-  languages.python.version = "3.12.4";
-  languages.python.poetry.enable = true;
-  languages.python.poetry.install.enable = false;
 }
