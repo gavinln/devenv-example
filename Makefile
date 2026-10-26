@@ -26,6 +26,10 @@ markdownlint:  ## run markdown file lint
 nixfmt:  ## format nix files
 	nixfmt $$(find . -name '*.nix')
 
+.PHONY: format
+format:  ## format files
+	uvx pre-commit run --all-files
+
 .PHONY: clean
 clean: env-rm  ## remove temporary files
 	rm -f poetry.lock
