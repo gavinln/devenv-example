@@ -139,7 +139,7 @@
         echo $DEVENV_TASK_INPUT > $DEVENV_ROOT/input.json
         echo '{ "output": 1 }' > $DEVENV_TASK_OUTPUT_FILE
         echo $DEVENV_TASKS_OUTPUTS > $DEVENV_ROOT/outputs.json
-        '';
+      '';
       input = {
         value = 1;
       };
@@ -148,7 +148,7 @@
 
   # task with 2 inputs: name and value
   # devenv tasks run example:task-with-input
-  # devenv tasks run example:task-with-input --input name=Bob --input value=2       
+  # devenv tasks run example:task-with-input --input name=Bob --input value=2
   tasks."example:task-with-input" = {
     input = {
       name = "John";

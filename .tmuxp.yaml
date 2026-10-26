@@ -1,15 +1,15 @@
 session_name: devenv-example
 start_directory: "."
 windows:
-- window_name: edit-run
-  layout: even-vertical
-  focus: true
-  shell_command_before:
-    - echo initial command
-  panes:
-    - shell_command: bash
-      focus: true
-    - shell_command: eza -s modified -l --time-style relative
-- window_name: jj
-  panes:
-    - shell_command: jj st
+  - window_name: edit-run
+    layout: even-vertical
+    focus: true
+    shell_command_before:
+      - echo initial command
+    panes:
+      - shell_command: bash
+        focus: true
+      - shell_command: eza -s modified -l --time-style relative
+  - window_name: jj
+    panes:
+      - shell_command: jj st
